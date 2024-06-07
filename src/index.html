@@ -1,11 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Galeri Arkeolog</title>
+    <link rel="stylesheet" href="../css/gfont.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/app.css">
 </head>
+
 <body>
-    
+    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ARKEOLOG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#galerry">Galeri</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid px-0">
+        <div class="row align-items-center content" id="home">
+            <div class="col-lg-6">
+                <div class="text-white text-center d-none d-lg-block" id="title-head">
+                    <h1>
+                        ARKEOLOG GALERI
+                    </h1>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="../assets/arkeolog01.png" alt="">
+            </div>
+        </div>
+        <div class="row align-items-center content" id="about">
+            <div class="col-lg-6 order-2 order-md-1">
+                <img class="img-fluid" src="../assets/arkeolog02.png" alt="">
+            </div>
+            <div class="col-lg-6 text-center order-1 order-md-2">
+                <div class="row">
+                    <h2>Litle Arkeolog</h2>
+                    <p class="lead">
+                        Archaeology, often likened to a detective's pursuit through time, is the meticulous study of
+                        past human life and cultures through the recovery and analysis of material remains. Little
+                        archaeologists, the young enthusiasts diving into this field, bring a fresh perspective and
+                        boundless curiosity to ancient mysteries. Equipped with miniature trowels and an unyielding
+                        spirit of discovery, these budding scientists uncover fragments of history that tell stories of
+                        bygone eras. From piecing together pottery shards to brushing away centuries of dirt from
+                        forgotten artifacts, their work, though small in scale, contributes significantly to our
+                        understanding of humanity's rich and diverse heritage.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center content" id="galerry">
+            <div class="col-lg-6 order-2 order-md-1">
+                <img class="img-fluid" src="../assets/arkeolog03.png" alt="">
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="row">
+                    <h2>Senior Arkeolog</h2>
+                    <p class="lead">
+                        Senior archaeologists, seasoned experts in the field, play a crucial role in unraveling the
+                        intricate tapestry of human history. With years of experience and a deep well of knowledge, they
+                        lead excavations, analyze artifacts, and interpret findings that shed light on ancient
+                        civilizations. Their expertise allows them to meticulously plan and execute digs, often in
+                        challenging environments, ensuring the preservation and accurate documentation of invaluable
+                        cultural heritage. Beyond the trenches, senior archaeologists mentor younger generations,
+                        imparting their wisdom and fostering a passion for discovery. Their contributions extend beyond
+                        academia, influencing museum curation, cultural heritage policies, and public understanding of
+                        our shared past. Through their dedication, senior archaeologists help bridge the gap between
+                        history and the present, ensuring that the stories of our ancestors continue to inform and
+                        inspire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/bootstarp.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function(){
+            $(document).scroll(function(){
+                let $nav = $('#navbar')
+                $nav.toggleClass('scrolled', $(this).scrollTop()>$nav.height());
+            })
+        })
+    </script>
+
 </body>
+
 </html>
